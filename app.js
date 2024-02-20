@@ -16,10 +16,13 @@ app.use(bodyParser.urlencoded({extended: false, limit: '10440kb'}));
 
 // Application Routes
 const applicationStadiumRoute = require('./routes/application/stadiumRoute');
-
+const applicationTeamRoute = require('');
+const applicationNewsRoute = require('');
 
 
 app.use('/stadium', applicationStadiumRoute);
+app.use('/teams', applicationTeamRoute);
+app.use('/news', applicationNewsRoute);
 
 app.get('/', (req, res, next) => {
     res.send('Merhaba Dünya!');
